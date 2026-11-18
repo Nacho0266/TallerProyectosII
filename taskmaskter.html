@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskMaster</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="app-container">
+        <header class="app-header">
+            <h1>TaskMaster</h1>
+        </header>
+
+        <!-- Formulario de entrada -->
+        <section class="task-form-section">
+            <form id="task-form" class="task-form">
+                <input 
+                    type="text" 
+                    id="task-input" 
+                    placeholder="Escribe una tarea" 
+                    maxlength="120"
+                    required
+                >
+                <button type="submit" id="add-task-btn">Agregar</button>
+            </form>
+        </section>
+
+        <!-- Filtros y estadísticas -->
+        <section class="task-controls">
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">Todas</button>
+                <button class="filter-btn" data-filter="pending">Pendientes</button>
+                <button class="filter-btn" data-filter="completed">Completadas</button>
+            </div>
+        </section>
+
+        <!-- Lista de tareas -->
+        <section class="task-list-section">
+            <ul id="task-list" class="task-list">
+                <!-- Las tareas se renderizan dinámicamente -->
+            </ul>
+        </section>
+
+        <!-- Pie de página / Estadísticas -->
+        <footer class="app-footer">
+            <span id="task-counter">0 tareas pendientes</span>
+        </footer>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
